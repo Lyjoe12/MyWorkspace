@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/static/css/rp.css" />
+{% extends "base.html" %} {% block content %}
+<h1>RP Calculator</h1>
+<div>
+  <form action="{{ url_for('rp_calc') }}" method="POST">
+    <p>
+      <label for="pw">Do you wish to include result of PW?</label>
+      <select id="if_pw" name="pw">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </p>
+    <p>
+      <label for="mtl"
+        >Do you wish to include result of Mother Tongue Language?</label
+      >
+      <select id="if_mtl" name="mtl">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </p>
+  </form>
+</div>
+
+{% endblock %}
